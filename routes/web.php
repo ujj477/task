@@ -13,8 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('login');
+// });
+// login
+        Route::get('/', 'userController@login_view');
+        Route::get('login', 'userController@login_view');
+        Route::post('login', 'userController@login'); 
+        Route::get('logout', 'userController@logout');
+        Route::get('register', 'userController@add_register');
+        Route::post('saveRegister', 'userController@save_register');
+        Route::get('userList', 'userController@listUser');
+        Route::get('ajaxListUser', 'userController@ajaxListUser');
+
 
 

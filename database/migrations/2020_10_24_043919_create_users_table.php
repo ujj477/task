@@ -19,8 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('email')->nullable();
             $table->string('bio')->nullable();
             $table->string('profile')->nullable();
-            $table->string('businessId')->nullable();
-            $table->string('profileId')->nullable();
+            $table->string('phone')->nullable();
+            $table->longText('password')->nullable();
             $table->timestamps();
         });
     }
